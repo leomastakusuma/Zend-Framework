@@ -24,7 +24,7 @@ class Plugin_AccessCheck  extends Zend_Controller_Plugin_Abstract{
        if(!empty($identify))
          {$role = $identify->role;}
        else{$role = $identify['role'];}
-                    
+       
 //     Setelah ditemukan makan selanjutnya dimasukan ke hak akses
 //     Jika Belom login Maka secara default akan di lempar ke halaman login            
          try {if(!$this->_acl->isAllowed($role, $resource, $action)){

@@ -19,7 +19,8 @@ class Application_Model_DbTable_Mahasiswa extends Zend_Db_Table_Abstract
     {
         $query    = $this->select();
         $query->from(($this->_name),array('*'));     
-        $query->where('Nama LIKE ?', "%{$cari}%");
+        $query->where('Nama LIKE ?', "%$cari%");
+        $query->orWhere('id_mahasiswa = ?', $cari);
         $find     = $this->fetchAll($query)->toArray();
         return $find;
     }
@@ -58,8 +59,7 @@ class Application_Model_DbTable_Mahasiswa extends Zend_Db_Table_Abstract
         } else {
             $where = $this->getAdapter()->quoteInto('id_mahasiswa = ?', $id_mahasiswa);
             $this->delete($where);
-       //print_r($id_mahasiswa);die;
-            
+                 
         }
     }
     

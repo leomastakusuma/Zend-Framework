@@ -23,6 +23,7 @@
             <td>Hobi</td>      
          </tr>
     <?php $no=0;?>    
+    <?php if (count($this->findsearch) > 1) : ?>     
     <?php foreach ($this->findsearch as $row):?>
     <?php $no++;?>    
         <tr>
@@ -33,5 +34,14 @@
            <td><?php echo $row['hobi'];?></td>
         </tr>
    <?php endforeach;?>
+   <?php else : ?>
+        
+   <?php    echo "<script language=\"Javascript\">\n"; 
+            echo "window.alert('Data yang Anda Cari Tidak Ditemukan.....')\n"; 
+//            echo "document.location.href=\"Mahasiswa\index"; 
+            echo "</script>"; 
+           
+   ?>
+   <?php endif;?>
         </table>
 </div>

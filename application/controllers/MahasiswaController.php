@@ -135,8 +135,9 @@ class MahasiswaController extends Zend_Controller_Action
                  $geteditmahasiswa = new Application_Model_DbTable_Mahasiswa();
 	       	 $idx=  intval(1);
 	       	 foreach ($id as $idx=>$idmulti)
-	       	 {      $data           = $geteditmahasiswa->geteditMahasiswa($idmulti);
-                        $nama           = $form->getSubForm('nama')
+	       	 {      
+                     $data           = $geteditmahasiswa->geteditMahasiswa($idmulti);
+                     $nama           = $form->getSubForm('nama')
                                                ->addElement('text','nama',array('label'=>'Nama',
                                                                                            'Required'=>'True',
                                                                                            'Validator'=>'NotEmpty',
@@ -151,11 +152,11 @@ class MahasiswaController extends Zend_Controller_Action
 //	       	 	$hobbies = explode(',', $data['hobi']);
 ////                        $form->getElement('hobi')->setValue($hobbies);
 //	       	 	
-	       	 	echo $this->view->formmultiedit=$form;
-//	       	 	
-	       	 	
+//	       	 	echo $this->view->formmultiedit=$form;
+                        echo '<pre>';
+                    print_r($data);
 	       	 }
-	       	 
+	       	 die;
 	       	 
 	       }
        	
