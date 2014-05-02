@@ -1,0 +1,164 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Apr 2, 2014, 1:53:33 PM
+    Author     : leomasta
+*/
+
+.bgtabel 
+{ 
+background-image: url(img/header%20copy.jpg) ; 
+background-size:1100px; 
+background-repeat:space; 
+} 
+.kotak { 
+      
+    border: thin solid #000; 
+    background-image:url(img/kotak.png); 
+} 
+
+  
+.nav { 
+    font-family: Arial, Helvetica, sans-serif; 
+    font-style: normal; 
+    background-attachment: fixed; 
+    position: fixed; 
+    height: auto; 
+    width: auto; 
+    left: auto; 
+    top: auto; 
+    right: auto; 
+    bottom: auto; 
+    line-height: normal; 
+    text-decoration: none; 
+    background-position: left; 
+} 
+.linkmenu 
+{ 
+    font-family: Arial, Helvetica, sans-serif;
+    background:url(img/btn.png); 
+    font-size: 12px; 
+    font-style: normal; 
+    line-height: normal; 
+    font-weight: bold; 
+    font-variant: normal; 
+    text-transform: capitalize; 
+    color: #FFFFFF; 
+    text-decoration: none; 
+} 
+.bgisi { 
+    background-repeat: repeat; 
+    background-image: url(img/tmb.png); 
+} 
+.kanankiri { 
+    border: thin solid #999999; 
+} 
+.kanan { 
+    border-top-width: thin; 
+    border-right-width: thin; 
+    border-bottom-width: thin; 
+    border-left-width: thin; 
+    border-right-style: solid; 
+    border-top-color: #999999; 
+    border-right-color: #999999; 
+    border-bottom-color: #999999; 
+    border-left-color: #999999; 
+} 
+.bawah { 
+    border-top-width: thin; 
+    border-right-width: thin; 
+    border-bottom-width: thin; 
+    border-left-width: thin; 
+    border-bottom-style: solid; 
+    border-top-color: #000000; 
+    border-right-color: #999999; 
+    border-bottom-color: #999999; 
+    border-left-color: #000000; 
+    border-right-style: solid; 
+} 
+  
+body 
+{ 
+    background-repeat:repeat-x; 
+    background-attachment: fixed; 
+    background-image: url(images/bground1.png); 
+    font-family: Verdana, Arial, Helvetica, sans-serif; 
+    font-size: 12px; 
+    color: #000000; 
+    text-decoration: none; 
+} 
+.kolomstatis { 
+    font-family: Arial, Helvetica, sans-serif; 
+    font-style: normal; 
+    background-attachment: fixed; 
+    position: fixed; 
+    height: auto; 
+    width: auto; 
+    left: auto; 
+    top: auto; 
+    right: auto; 
+    bottom: auto; 
+    line-height: normal; 
+    text-decoration: none; 
+    background-position: left; 
+    background-color: #CCCCCC; 
+    background-repeat: repeat-x; 
+    background-repeat: repeat-y; 
+} 
+/* RESET */
+a:hover { 
+    background:url(img/btn.png); 
+    background-repeat:repeat; 
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: 12px; 
+    font-style: normal; 
+    font-weight: bold; 
+    color: #FFFFFF; 
+    text-decoration: none; 
+} 
+a { 
+  
+    background-repeat:repeat; 
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: 12px; 
+    font-style: normal; 
+    font-weight: bold; 
+    color: #000000;  
+    text-decoration: none; 
+} 
+.side { 
+    background-attachment: scroll; 
+    background-repeat: repeat-x; 
+    background-image: url(../img/sp.png); 
+} 
+.as { 
+    text-decoration: none; 
+    background:url(img/kotak.png); 
+    background-repeat:repeat; 
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: 12px; 
+    font-style: normal; 
+    font-weight: bold; 
+    color: #000000; 
+    text-decoration: none; 
+} 
+.tbl { 
+    border: medium solid #FFFFFF; 
+} 
+.button { 
+    background: url(img/tmb.png); 
+    border: thin dotted #000000; 
+    font-family: Verdana, Arial, Helvetica, sans-serif; 
+    font-size: 12px; 
+    text-decoration: none; 
+} 
+.button:hover { 
+    background : url(img/btn.png); 
+    border: thin dotted #FFFFFF; 
+    font-family: Verdana, Arial, Helvetica, sans-serif; 
+    font-size: 12px; 
+    text-decoration: none; 
+} 

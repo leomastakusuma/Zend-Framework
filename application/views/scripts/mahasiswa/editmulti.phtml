@@ -1,0 +1,36 @@
+<br /><br />
+<div id="view-content">
+    
+        <table border="1" cellpading="0" cellspacing="0" width="100%" class="widescreen">
+            <form action="<?php echo $this->url(array('action'=>'getmultiedit'));?>" method="post">    
+        <tr>
+            <td>No</td>
+            <td>Nama</td>
+            <td>Alamat</td>
+            <td>Umur</td>
+            <td>Hobi</td>      
+            <td>Action</td>
+        </tr>
+        <?php $no=0?>  
+        <?php foreach ($this->mahasiswamulti as $row): $no++?>
+        <tr>
+            <td><?php echo $no?></td>
+            <td><?php echo $row->Nama;?></td>
+            <td><?php echo $row->Jenis_Kelamin?></td>
+            <td><?php echo $row->Umur?></td>
+            <td><?php echo $row->hobi;?></td>
+            <td>
+                <input type="checkbox" value="<?php echo $row->id_mahasiswa?>" name="multi[]">
+            </td>
+        </tr>
+        <?php endforeach;?>
+        <tr>
+            <td colspan="6">
+                 <input type="submit" name="MultiDelete" value="Multi Edit">
+            </td>
+        </tr>
+            </form>
+        </table>    
+        
+        
+</div>

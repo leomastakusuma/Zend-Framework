@@ -1,0 +1,37 @@
+<br /><br />
+<div id="view-content">
+    <ul class="actions-list">
+        <li class="left">Search</li>
+        <li class="left">
+            <form action="<?php echo $this->url(array('controller'=>'Mahasiswa','action'=>'cari'))?>" method="post">
+                <input type="text" name="cari" id="search" class="left"/>
+                <input type="image" src="/images/search.png" class="search left" id="searchBtn" />
+            </form>
+        </li>
+        <li><a href="/Mahasiswa/insertmahasiswa" class="nice blue button right">Insert New Record</a></li>
+    </ul>
+   
+    </form>
+    <form action="<?php echo $this->url(array('action'=>'delete'))?>" method="post">
+        
+        <table border="1" cellpading="0" cellspacing="0" width="100%" class="widescreen">
+          <tr>
+            <td>No</td>
+            <td>Nama</td>
+            <td>Jenis Kelamin</td>
+            <td>Umur</td>
+            <td>Hobi</td>      
+         </tr>
+    <?php $no=0;?>    
+    <?php foreach ($this->findsearch as $row):?>
+    <?php $no++;?>    
+        <tr>
+           <td><?php echo $no ;?></td>
+           <td><?php echo $row['Nama'];?></td>
+           <td><?php echo $row['Jenis_Kelamin'];?></td>
+           <td><?php echo $row['Umur'];?></td>
+           <td><?php echo $row['hobi'];?></td>
+        </tr>
+   <?php endforeach;?>
+        </table>
+</div>
