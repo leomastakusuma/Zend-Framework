@@ -102,61 +102,36 @@ class MahasiswaController extends Zend_Controller_Action
 	       {
                  
                  $form = new Application_Form_Formmulti();     
-//                 
-//                 for($ulang=1 ; $ulang<=  count($id);$ulang++)
-//                 {
-//                     $nama           = $form->getSubForm('nama')
-//                                              ->addElement('text','nama',array('label'=>'Nama',
-//                                                                                           'Required'=>'True',
-//                                                                                           'Validator'=>'NotEmpty',
-//                                                                                           'ErrorMessage'=>'Tidak Kosong'
-//                                                                                            ));
-//                       
-//                     $umur           = $form->getSubForm('nama')
-//                                              ->addElement('text','umur',array('label'=>'umur',
-//                                                                                           ));
-//                       
-//                     $jenis_kelamin  = $form->getSubForm('nama')
-//                                              ->addElement('select','jenis_kelamin',
-//                                                            array('multioptions'=>array('Laki-Laki' => 'Laki-Laki',
-//                                                                                        'Perempuan' => 'Perempuan'),
-//                                                                                        'label'=>'jeniskelamin'));
-//                       
-//                     $hobi           = $form->getSubForm('nama')
-//                                              ->addElement('MultiCheckbox','hobi', array('multioptions'=>array('renang'     => 'renang',
-//                                                                                                                           'nonton   '  => 'nonton',
-//                                                                                                                           'video game' => 'Video Game'
-//                                                          )));
-                                              
-                         
-//                 }
-//                 echo $this->view->multiedit = $form;
-	       	 
+ 
                  $geteditmahasiswa = new Application_Model_DbTable_Mahasiswa();
 	       	 $idx=  intval(1);
+                 $datas=array();
 	       	 foreach ($id as $idx=>$idmulti)
 	       	 {      
-                     $data           = $geteditmahasiswa->geteditMahasiswa($idmulti);
+                     $data['a']      = $geteditmahasiswa->geteditMahasiswa($idmulti);
                      $nama           = $form->getSubForm('nama')
                                                ->addElement('text','nama',array('label'=>'Nama',
                                                                                            'Required'=>'True',
                                                                                            'Validator'=>'NotEmpty',
-                                                                                           'ErrorMessage'=>'Tidak Kosong'
-                                                                                                                   ));
-                                          
+                                                                                           'ErrorMessage'=>'Tidak Kosong'));
+                     echo '<pre>';
+                     print_r($data);
+                     
+//                     $datas = $data;                     
                                                                                                         
                         
                                              
 //	       	 	
-	       	 	$form->populate($data);
+	       	 	
 //	       	 	$hobbies = explode(',', $data['hobi']);
 ////                        $form->getElement('hobi')->setValue($hobbies);
 //	       	 	
 //	       	 	echo $this->view->formmultiedit=$form;
-                        echo '<pre>';
-                    print_r($data);
+//                        echo '<pre>';
+//                        print_r($data);
 	       	 }
-	       	 die;
+                 
+//	       	 die;
 	       	 
 	       }
        	
