@@ -117,21 +117,10 @@ class MahasiswaController extends Zend_Controller_Action
                      echo '<pre>';
                      print_r($data);
                      
-//                     $datas = $data;                     
-                                                                                                        
-                        
-                                             
-//	       	 	
-	       	 	
-//	       	 	$hobbies = explode(',', $data['hobi']);
-////                        $form->getElement('hobi')->setValue($hobbies);
-//	       	 	
-//	       	 	echo $this->view->formmultiedit=$form;
-//                        echo '<pre>';
-//                        print_r($data);
+//                   
 	       	 }
                  
-//	       	 die;
+
 	       	 
 	       }
        	
