@@ -14,17 +14,20 @@ Setting Up Your VHOST
 The following is a sample VHOST you might want to consider for your project.
 
 <VirtualHost *:80>
-   DocumentRoot "/var/www/absensi/public"
+   DocumentRoot /var/www/absensi/public
    ServerName absensi.local
 
    # This should be omitted in the production environment
-   SetEnv APPLICATION_ENV development
+   #SetEnv APPLICATION_ENV development
 
-   <Directory "/var/www/absensi/public">
-       Options Indexes MultiViews FollowSymLinks
+   <Directory /var/www/absensi/public>
+       DirectoryIndex index.php
        AllowOverride All
        Order allow,deny
        Allow from all
    </Directory>
-
+   
+   ErrorLog ${APACHE_LOG_DIR}/error.log
+   CustomLog ${APACHE_LOG_DIR}/access.log combined
+    
 </VirtualHost>

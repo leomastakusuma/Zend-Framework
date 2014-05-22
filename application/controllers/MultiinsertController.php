@@ -15,7 +15,7 @@ class MultiinsertController extends Zend_Controller_Action
         
         if($this->getRequest()->isPost())
         {
-        	$form = new Application_Form_Formmulti();
+            $form = new Application_Form_Formmulti();
             if($addmulti->isValid($this->_request->getPost()))
             {
                $a=$addmulti->getValue('no');

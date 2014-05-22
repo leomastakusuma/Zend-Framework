@@ -11,8 +11,12 @@ class MahasiswaController extends Zend_Controller_Action {
 		$form = new Application_Form_InputMahasiswa ();
 		$this->view->form = $form;
 		if ($this->getRequest ()->isPost ()) :
+//                    echo $this->getRequest()->isPost();exit;
 			
 			if ($form->isValid ( $this->_request->getPost () )) :
+                            echo '<pre>';
+                            print_r($this->getAllParams());
+                            exit;
 				$nama = $this->getRequest ()->getParam ( 'nama' );
 				$jenis_kelamin = $this->getRequest ()->getParam ( 'jenis_kelamin' );
 				$umur = $this->getRequest ()->getParam ( 'umur' );
