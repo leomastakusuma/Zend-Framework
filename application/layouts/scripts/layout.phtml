@@ -1,41 +1,109 @@
-<?php echo $this->doctype() ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Zend Application</title>
-    <?php // echo $this->headLink()->appendStylesheet('styles/styles.css')?>
-    <?php // echo $this->headLink()->appendStylesheet('styles/sites.css')?>
-    <?php echo $this->headLink()->appendStylesheet($this->baseUrl('/css/foundation.css')) ?>
-    <?php echo $this->headLink()->appendStylesheet($this->baseUrl('/css/app.css')) ?>
-    <?php echo $this->headLink()->appendStylesheet($this->baseUrl('/css/ie.css', 'screen', 'if lt IE 9')) ?>
-    <?php //echo $this->headScript()->appendFile('http://html5shiv.googlecode.com/svn/trunk/html5.js', $type = 'text/javascript', $attrs = array('conditional' => 'lt IE 9'));?>
-    <?php //echo $this->headScript()->appendFile(' https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js', $type='text/javascript');?>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<title>Siakad Online</title>
+
+<?php echo $this->headLink()->appendStylesheet($this->baseUrl('style.css')) ?>
+
+<!--[if IE 6]>
+    <script type="text/javascript" src="unitpngfix.js"></script>
+<![endif]--> 
 </head>
-<body>   
-       <div class="row">
-	<div class="twelve columns white-background">
-            <h5>Crud</h5>
-            <p>Versi 001</p>
-            <hr />
-            <ul class="menu">
+<body>
+<div class="wrap">
+    <div class="header">
+        <div class="logo"><a href="<?php echo $this->url(array("action"=>"index"))?>"><img src="<?php echo $this->baseUrl('../images/logo.gif')?>" alt="" title="" border="0" /></a></div>
+     
+    </div>
+    
+        <div id="menu">
+            <ul>                                                                       
+           
                 <li><a href="<?php echo $this->url(array('controller'=>'Mahasiswa','action'=>'index'))?>">Home</a></li>
                 <li><a href="<?php echo $this->url(array('controller'=>'Multiinsert','action'=>'index'))?>">Add Multi</a></li>
                 <li><a href="<?php echo $this->url(array('controller'=>'Mahasiswa','action'=>'editmulti'))?>">Edit Multi</a></li>
                 <li><a href="<?php echo $this->url(array('controller'=>'Login','action'=>'logout'))?>">Logout</a></li>
 
             </ul>
-            <hr/>
-            <div class="white-background">
-            <?php echo $this->layout()->content ?>
-            <hr />
-            </div>
-            <div id="footer"><p align="center">Copyright</p></div>
+        </div> 
+    
+    <div class="tab_bg">
+    
             
-	</div>
+       <div class="tab_left">
+       <img src="<?php echo $this->baseUrl('images/big_icon.png')?>" alt="" title="" border="0" class="big_icon" />       
+        </div>
+        
+        <div class="middle_text">
+        <h1>We grow ideas</h1>
+        <p>
+        No Spaming 
+        </p>
+        
+        </div>
     
-    
-</div>
+        <div class="tabs">
+            <div class="tab">
+            <img src="<?php echo $this->baseUrl('images/icon1.png')?>" alt="" title="" border="0" class="tab_icon" />
+            <p class="tab_text">
+            <a href="#">Lorem ipsum dolor sit amet</a><br />
+            Consectetur adipisicing
+            </p>
+            </div>
+            
+            <div class="tab">
+            <img src="<?php echo $this->baseUrl('images/icon2.png')?>" alt="" title="" border="0" class="tab_icon" />
+            <p class="tab_text">
+            <a href="#">Twitter</a><br />
+            Consectetur adipisicing
+            </p>
+            </div> 
+            
+            
+            <div class="tab">
+            <img src="<?php echo $this->baseUrl('images/icon3.png') ?>" alt="" title="" border="0" class="tab_icon" />
+            <p class="tab_text">
+            <a href="#">Lorem ipsum dolor sit amet</a><br />
+            Consectetur adipisicing
+            </p>
+            </div>  
+            
+            
+                   
+                  
+        </div>
 
+    
+    <div class="clear"></div>
+    </div>
+    <div class="center_content">
+ 
+         
+         <?php echo $this->layout()->content?>
+        
+        <div class="clear"></div>   
+    </div>
+    
+     <div id="footer">
+        <div class="footer_links">                      
+        <!--     <a href="<?php echo $this->url(array('controller'=>'home','action'=>"index"))?>">home</a>
+            <a href="#">about</a>
+            <a href="#">services</a>
+            <a href="#">clients</a>
+            <a href="#">projects</a>
+            <a href="#">request a quote </a>
+            <a href="#">get in touch</a>    -->      
+        </div>
+        
+        <div class="copyright">
+<a href="http://csstemplatesmarket.com"><img src="<?php echo $this->baseUrl('images/csstemplatesmarket.gif')?>" border="0" alt="" title="" /></a>
+        </div>    
+    
+    </div> 
+
+
+
+</div>
 </body>
 </html>
-    

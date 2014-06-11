@@ -1,13 +1,32 @@
 <br /><br />
 <div id="view-content">
+<table align="center" width="100%" border="1" cellpadding="0" cellspacing="0">
+<tr>
+	<td>NIP</td>
+	<td>Nama</td>
+	<td>Jenis Kelamin</td>
+	<td>Matakuliah</td>
+</tr>
+
+
 	<?php $a = $this->dosen;
+	$no=1;
  foreach ($a as $inc)
- {
-     echo $inc->Nip;
-     echo $inc->Nama;
-     echo $inc->Jenis_Kelamin;
-     echo $inc->Matakuliah;
+ {  $no++
+    ?>
+    <tr>
+    <td><?php echo $inc->Nip?></td>
+    <td><?php echo $inc->Nama?></td>
+    <td><?php echo $inc->Jenis_Kelamin?></td>
+    <td><?php echo $inc->Matakuliah?></td>
+    </tr>
+
+    <?php
  }
         
         ?>
+
+
+</table>
+
 </div>

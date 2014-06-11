@@ -17,10 +17,31 @@ class Dosen_DosenController extends Zend_Controller_Action
     public function insertAction()
     {
         $form = new Dosen_Form_Insertdosen();
-//        print_r($form);die;
         $this->view->forminsert = $form;
+       
+        if($this->getRequest()->isPost()){
+            if($form->isValid($this->_request->getpost())){
+                $nama       = $this->getRequest()->getParam('nama');
+                $jenisk     = $this->getRequest()->getParam('Jenis_Kelamin');
+                $values     = $form->getValues ();
+                $matakuliah = $values ['Matakuliah'];
+                $dosen      = new Dosen_Model_DbTable_Dosen();
+                $dosen->insertDosen($nama, $jenisk, $matakuliah);
+                $this->_helper->redirector ( 'insert' );
+            }
+            else
+            {
+                $this->view->form = $form;
+            }
+        }
         
     }
+
+    public function editAction()
+    {
+        
+    }
+
 
 
 }

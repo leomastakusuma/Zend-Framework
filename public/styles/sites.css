@@ -1,6 +1,6 @@
-    body {
+body {
 font-size: 10px;
-background:url(../images/body.jpg) repeat-x;
+background:url(/images/body.jpg) repeat-x;
 }
 * {
 margin: 0;
@@ -23,7 +23,7 @@ height: 5em;
 padding:1em 2em;
 }
 #nav {
-background: url(../images/nav.jpg) repeat-x #FD9421;
+background: url(/images/nav.jpg) repeat-x #FD9421;
 height: 2.5em;
 margin: 0 0 .5em 0;
 padding:.5em 0;
